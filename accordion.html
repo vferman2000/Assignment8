@@ -10,56 +10,51 @@
 <!--  <script src="jquery-3.2.0.min.js"></script>-->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-	$( document ).ready(function() {
 	$( function() {
-	
-    $( "div.accordion" ).accordion({
+		
+	$( "div.accordion" ).accordion({
     collapsible: true,
 	active: false,
-	heightStyle: "content"
-	});
-	$(".ui-accordion-header").css("background","#EA87E8");
-	$(".ui-accordion-header.ui-state-active ").css("background","orange") ;
-	$("#b .ui-accordion-header").css({"background":"#0DFFFD"});
-	$("#c .ui-accordion-header").css({"background":"#0DFFFD"});
-	$("#d .ui-accordion-header").css({"background":"#0DFFFD"});
-	$("#b").css({"padding":"0px", "margin":"0px 0px 0px 0px", "width":"100%"});
-	$("#c").css({"padding":"0px", "margin":"0px 0px 0px 0px", "width":"100%"});
-	$("#d").css({"padding":"0px", "margin":"0px 0px 0px 0px", "width":"100%"});
+	heightStyle: "content",
+	header: "h3",
 
-	});	
+	});
 		
+	var icons = {
+				header: "ui-icon-circle-plus",
+      			activeHeader: "ui-icon-circle-minus"
+				
+				};
+		
+	$( ".accordion" ).accordion ({
+		icons: icons
+	});
 	
+	$(".ui-accordion-header-collapsed").css({color, "#0DFFFD"});
+	$(".ui-accordion-content-active").css({color, "#EA87E8"});
+	
+		
 	});	
   </script>
 </head>
 <body>
  
 <div id="locations" class="accordion">
-  <h3>Where is Bahamas?   Read More...</h3>
-    
-	
-
-	<div id="b" class="accordion">
-	<h3>The Bahamas</h3>
+  <h3>Where is Bahamas?</h3>
 	<div>
     <p>The Bahamas (i/bəˈhɑːməz/), known officially as the Commonwealth of the Bahamas, is an archipelagic state within the Lucayan Archipelago. It consists of more than 700 islands, cays, and islets in the Atlantic Ocean and is located north of Cuba and Hispaniola (Haiti and the Dominican Republic); northwest of the Turks and Caicos Islands; southeast of the US state of Florida and east of the Florida Keys. The capital is Nassau on the island of New Providence. The designation of "the Bahamas" can refer either to the country or to the larger island chain that it shares with the Turks and Caicos Islands. As stated in the mandate/manifesto of the Royal Bahamas Defence Force, the Bahamas territory encompasses 470,000 km2 (180,000 sq mi) of ocean space.</p>
 		</div>
-	</div>
+
   
   
-  <h3>Where is Europe? Read More...</h3>
-	<div id="c" class="accordion">
-	<h3>Europe</h3>
+  <h3>Where is Europe?</h3>
   <div>
     <p>Europe is a continent that comprises the westernmost part of Eurasia. Europe is bordered by the Arctic Ocean to the north, the Atlantic Ocean to the west, and the Mediterranean Sea to the south. The eastern boundary with Asia is a historical and cultural construct, as there is no clear physical and geographical separation between them; Europe is generally considered as separated from Asia by the watershed divides of the Ural and Caucasus Mountains, the Ural River, the Caspian and Black Seas, and the waterways of the Turkish Straits.[4] Yet the non-oceanic borders of Europe—a concept dating back to classical antiquity—are arbitrary. The primarily physiographic term "continent" as applied to Europe also incorporates cultural and political elements whose discontinuities are not always reflected by the continent's current overland boundaries.<br><br>
 	Europe covers about 10,180,000 square kilometres (3,930,000 sq mi), or 2% of the Earth's surface (6.8% of land area). Politically, Europe is divided into about fifty sovereign states of which the Russian Federation is the largest and most populous, spanning 39% of the continent and comprising 15% of its population. Europe had a total population of about 740 million (about 11% of world population) as of 2015.</p>
 	</div>
-	</div>
 
-  <h3>Where is Asia? Read More...</h3>
-	 <div id="d" class="accordion">
-	<h3>Asia</h3>
+  <h3>Where is Asia?</h3>
+	 <div>
     <p>Asia (i/ˈeɪʒə, ˈeɪʃə/) is Earth's largest and most populous continent, located primarily in the eastern and northern hemispheres and sharing the continental landmass of Eurasia with the continent of Europe and shares the continental landmass of Afro-Eurasia with both Europe and Africa. Asia covers an area of 44,579,000 square kilometres (17,212,000 sq mi), about 30% of Earth's total land area and 8.7% of the Earth's total surface area. The continent, which has long been home to the majority of the human population,[3] was the site of many of the first civilizations. Asia is notable for not only its overall large size and population, but also dense and large settlements as well as vast barely populated regions within the continent of 4.4 billion people.</p>
   </div>
 	</div>
