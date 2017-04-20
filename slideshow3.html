@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SlideShow</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- <script src="jquery-3.2.0.min.js"></script>-->
+<script>
+$( document ).ready(function() {
+	 $("a").css("color", "black");
+            $("img").css({
+				"display":"block",
+				"margin-left":"auto",
+				"margin-right":"auto",
+                "border": "solid 20px #4FD1FF",
+				"border-radius":"0px 50px 0px 50px",
+                "width": "80%"
+                
+            });
+			$("body").css({"background-color":"#ff3399"});
+			
+			$("ul#slide-box").css({"margin-left":"200px"});
+            $("ul#slide-box li").css({"display": "inline-block"});
+
+            $("ul#slide-box li a").css({
+                "text-decoration": "none",
+                "font-size": "50px",
+				"color": "white",
+                "font-weight": "bold",
+                "padding-left": "5px",
+                "padding-right": "5px"
+            });
+
+            $("#default").css("text-decoration", "underline");
+            $("#default a").css("color", "#4FD1FF");
+
+            $("#slide-box a").each(function () {
+                var swappedImage = new Image();
+                swappedImage.src = $(this).attr("href");
+            });
+
+            $("#slide-box a").click(function (e) {
+                var imageURL = $(this).attr("href");
+                $("#image").attr("src", imageURL);
+                e.preventDefault();
+                $("#default").css("text-decoration", "none");
+                $(this).css({
+                    "text-decoration": "underline",
+                    "color": "#4FD1FF"
+                });
+                $("ul#slide-box a").not(this).css({
+                    "text-decoration": "none",
+                    "color": "black"
+                });
+            });
+});
+
+</script>
+</head>
+<body>
+
+
+<div class="container">
+          
+			  <img id="image" src="images/yukon2.jpg">
+            <ul id="slide-box">
+                
+               <!--  slide 1 -->
+			  <li id="default"><a href="images/yukon2.jpg">1</a></li>
+				<li id="2"> <a href="images/BW015078.JPG" alt="Where do you want to go?">2</a>
+              </li>
+                
+                <!--  slide 2 -->
+				<li id="3"> <a href="images/BW015086.JPG" alt="Let's go">3</a>
+              </li>
+                
+                     <!--  slide 3 -->
+				<li id="4"> <a href="images/dempstermountains.jpg" alt="Now">4</a>
+              </li>
+				
+				<li id="5"> <a href="images/TZ011125.jpg" alt="Come!">5</a>
+              </li>
+            </ul>
+              
+              
+     
+	</div>
+		</body>
+		</html>
